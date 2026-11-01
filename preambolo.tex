@@ -1,0 +1,155 @@
+% =========================================================
+% IMPOSTAZIONI GENERALI
+% =========================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% =========================================================
+% MATEMATICA
+% =========================================================
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+% Insiemi numerici
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% Valore assoluto e norma
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% =========================================================
+% GRAFICA
+% =========================================================
+
+\usepackage{graphicx}
+\usepackage{float}
+
+% Disegni matematici
+\usepackage{tikz}
+
+% Grafici di funzioni
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Riquadri
+\usepackage[most]{tcolorbox}
+
+% Librerie TikZ utili
+\usetikzlibrary{
+    arrows.meta,
+    calc,
+    intersections,
+    patterns,
+    positioning,
+    decorations.pathreplacing
+}
+
+% =========================================================
+% TEOREMI E DEFINIZIONI
+% =========================================================
+
+\theoremstyle{definition}
+\newtheorem{definizione}{Definizione}[section]
+\newtheorem{esempio}{Esempio}[section]
+\newtheorem{esercizio}{Esercizio}[section]
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{proposizione}{Proposizione}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollario}{Corollario}[section]
+
+% =========================================================
+% NOTE
+% =========================================================
+
+\newtcolorbox{nota}{
+    breakable,
+    title={Nota bene},
+    fonttitle=\bfseries,
+    colback=blue!4,
+    colframe=blue!55!black,
+    boxrule=0.8pt,
+    arc=2mm,
+    left=3mm,
+    right=3mm,
+    top=2mm,
+    bottom=2mm
+}
+
+% =========================================================
+% IMPAGINAZIONE
+% =========================================================
+
+\usepackage[
+    a4paper,
+    margin=2.5cm
+]{geometry}
+
+\usepackage{enumitem}
+
+% =========================================================
+% LINK
+% =========================================================
+
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+% =========================================================
+% FINE LEZIONE
+% =========================================================
+
+\newcommand{\finelezione}{
+    \vspace{1cm}
+    \begin{center}
+        $\diamond\qquad\diamond\qquad\diamond$
+
+        \textit{Fine della lezione}
+    \end{center}
+}
+
+% =========================================================
+% APPROFONDIMENTI PERSONALI
+% =========================================================
+
+\newtcolorbox{approfondimento}[1][]{
+    breakable,
+    title={Approfondimento personale},
+    fonttitle=\bfseries,
+    colback=gray!5,
+    colframe=gray!60,
+    boxrule=0.6pt,
+    arc=2mm,
+    #1
+}
+
+% =========================================================
+% FINE APPROFONDIMENTO
+% =========================================================
+
+\newcommand{\fineapprofondimento}{
+    \vspace{1cm}
+    \begin{center}
+        $\diamond\qquad\diamond\qquad\diamond$
+
+        \textit{Fine dell'approfondimento}
+    \end{center}
+}
